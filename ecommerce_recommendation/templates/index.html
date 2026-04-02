@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Recommendations | E-Commerce Next</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="minimal-header">
+        <div class="header-content">
+            <h1>E-Commerce <span>Next</span></h1>
+            <p>Intelligence distilled into curation.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Search Section -->
+        <section class="clean-panel main-search">
+            <h2>Personalized for you.</h2>
+            <p class="subtitle">Enter a mock user identifier (e.g. U1, U2, U3) to fetch AI-curated products.</p>
+            <div class="input-wrapper">
+                <input type="text" id="userIdInput" placeholder="User ID" autocomplete="off">
+                <button id="getRecBtn" class="btn-solid">
+                    <span>Discover</span>
+                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </button>
+            </div>
+            <div id="toastContainer" class="toast hidden"></div>
+        </section>
+
+        <!-- Skeleton / Loading State -->
+        <section class="loading-state hidden" id="loadingState">
+            <div class="skeleton-grid">
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-fade hidden" id="resultsSection">
+            <div class="results-header">
+                <h2>Curated Selections</h2>
+                <span class="badge">AI Match</span>
+            </div>
+            <div class="rec-grid" id="recommendationGrid">
+                <!-- Javascript injects cards here -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="minimal-footer">
+        <p>&copy; 2026 E-Commerce Next. Designed with minimalism.</p>
+    </footer>
+
+    <script src="static/js/script.js"></script>
+</body>
+
+</html>
